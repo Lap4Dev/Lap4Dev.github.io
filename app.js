@@ -13,6 +13,8 @@ const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 if(Object.entries(params).length) {
     if('show_hotel' in params)
+        alert(params.show_hotel);
+        Telegram.WebApp.close();
         tg.sendData(params.show_hotel);
         // alert();
 }
