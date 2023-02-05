@@ -14,9 +14,9 @@ const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 if(Object.entries(params).length) {
     if('show_hotel' in params)
-        Telegram.WebApp.close();
         tg.sendData(params.show_hotel);
         tg.MainButton.setText('Посмотреть подробную информацию').show();
+        // Telegram.WebApp.close();
 }
 
 Telegram.WebApp.onEvent('mainButtonClicked', () => {
