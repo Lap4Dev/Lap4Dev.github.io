@@ -1,5 +1,13 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
-//
-// tg.MainButton.textColor = '#FFFFFF';
-// tg.MainButton.color = '#2cab37';
+
+let yandexMap = document.querySelector('iframe');
+
+function resizeMap() {
+    yandexMap.height = window.innerHeight + 'px';
+    yandexMap.width = window.innerWidth + 'px';
+}
+
+
+window.onresize = resizeMap;
+resizeMap();
